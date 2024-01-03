@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+section{
+    position: relative;
+    padding: 8px;
+    width: 100%;
+    column-count: 3;
+}
+
+section img{
+    width: 100%;
+}
+
+.light_box{
+    position: relative;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.597);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    transform: scale(0,0);
+    transition: all .3s;
+}
+
+.light_box > div{
+    color: #fff;
+}
+
+.light_box .boximg{
+    width: 550px;
+    height: 300px;
+    border: 5px solid #fff;
+}
+
+.light_box .close{
+    cursor: pointer;
+    right: 50px;
+    top: 50px;
+    font-weight: 900;
+    position: absolute;
+}
+
+.light_box .boximg > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.light_box .clickleft , .light_box .clickright{
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.addleightshow{
+    transform: scale(1,1) !important;
+}
